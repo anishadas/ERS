@@ -4,7 +4,7 @@
   "description": "- npm i express nodemon mongoose dotenv ejs node-sass-middleware express-ejs-layouts \r - npm install passport-local",
   "main": "index.js",
   "engines": {
-    "node":"14.x"
+    "node":"18.x"
   },
   "scripts": {
     "start": "nodemon index.js",
