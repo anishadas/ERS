@@ -1,0 +1,46 @@
+<div class="container-fluid bgColor">
+    <div class="text-center pt-4">
+        <h2>Assign Work to Employees</h2>
+    </div>
+    <div class="container d-flex justify-content-evenly mt-4">
+        <div class="row col-md-5 card border-0">
+            <h3 class="text-center p-2  border-bottom bg-success text-white">Set
+                Reviewers</h3>
+            <form method="post" action="/admin/setReviewer"
+                class="card-body d-flex flex-column align-items-center">
+
+                <select name="recpient" class="form-select form-select-lg mb-4">
+                    <option selected disabled>Select Recipent</option>
+                    <option value>Payal</option>
+                    <option value>Raghav</option>
+                    <option value>Sriya</option>
+                </select>
+
+                <select name="Reviewer" class="form-select form-select-lg mb-4">
+                    <option selected disabled>Select Recipent</option>
+                    <option value>Payal</option>
+                    <option value>Raghav</option>
+                    <option value>Sriya</option>
+                </select>
+                <button class="btn btn-success" type="submit">Assign</button>
+            </form>
+        </div>
+        <div class="row col-md-5 card border-0">
+            <h3 class="text-center p-2  border-bottom bg-success text-white">Assign
+                Employees As
+                Admin</h3>
+            <form method="post" action="/admin/newAdmin"
+                class="card-body d-flex flex-column align-items-center justify-content-evenly">
+
+                <select name="recpient" class="form-select form-select-lg mb-4"
+                    aria-label="Default select example">
+                    <option selected disabled>Select Recipent</option>
+                    <option value>Payal</option>
+                    <option value>Raghav</option>
+                    <option value>Sriya</option>
+                </select>
+                <button class="btn btn-success" type="submit">Set Admin</button>
+            </form>
+        </div>
+    </div>
+</div>

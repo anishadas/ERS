@@ -1,0 +1,2 @@
+- npm i express nodemon mongoose dotenv ejs node-sass-middleware express-ejs-layouts 
+- npm install passport-local

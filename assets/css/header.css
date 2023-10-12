@@ -1,0 +1,4 @@
+@media screen and (min-width: 900px) {
+  .container-fluid .collapse {
+    display: flex;
+    justify-content: flex-end !important; } }

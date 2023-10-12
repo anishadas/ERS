@@ -1,0 +1,9 @@
+.main-container {
+  margin: 20px 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; }
+  .main-container .width {
+    width: 42%; }

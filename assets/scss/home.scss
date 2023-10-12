@@ -1,0 +1,13 @@
+.main-container {
+    margin: 20px 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .width {
+        width: 42%;
+        // font-size: 1.6rem;
+    }
+}

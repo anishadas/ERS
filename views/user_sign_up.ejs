@@ -1,0 +1,39 @@
+<div class="container-fluid bgColor">
+    <div class="row pt-5">
+        <div class="col-md-4 m-auto rounded">
+            <div class="card card-body ">
+                <form action="/users/create" method="post">
+                    <div class="form-floating mb-3">
+                        <input type="text" name="name" class="form-control"
+                            placeholder="your name" id="floatingInput" required>
+                        <label for="floatingInput">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" name="email" class="form-control"
+                            placeholder="abc@xyz.com" id="floatingEmail" required>
+                        <label for="floatingEmail">Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" name="password"
+                            id="floatingPassword"
+                            placeholder="your password" class="form-control"
+                            required />
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" name="confirmPassword"
+                            id="confirmPassword"
+                            placeholder="your password" class="form-control"
+                            required />
+                        <label for="confirmPassword">Confirm Password</label>
+                    </div>
+                    <div class="col-12 text-center mb-3">
+                        <button type="submit" class="btn btn-success w-100">SIGN
+                            UP</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
