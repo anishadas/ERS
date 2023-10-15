@@ -18,7 +18,19 @@ const userSchema = new mongoose.Schema({
     isAdmin: {
         type: Boolean,
         required:true,
-    }
+    },
+    to: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
+        }
+    ],
+    from: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Review',
+        }
+    ]
 }, {
     timestamps: true
 });

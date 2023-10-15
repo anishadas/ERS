@@ -1,0 +1,29 @@
+.reviewContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .reviewContainer .list-group-item {
+    margin-bottom: 10px;
+    border: 1px solid black; }
+    .reviewContainer .list-group-item small {
+      font-weight: 500;
+      color: red;
+      margin: 0 10px 0 20px; }
+    .reviewContainer .list-group-item .buttns {
+      margin-top: 20px;
+      display: flex;
+      width: 60%;
+      align-items: center;
+      justify-content: space-between; }
+      .reviewContainer .list-group-item .buttns .bttn {
+        padding: 5px 15px;
+        background-color: white;
+        border: 1px solid green;
+        text-decoration: none;
+        color: black;
+        border-radius: 6px;
+        cursor: pointer; }
+      .reviewContainer .list-group-item .buttns .bttn:hover {
+        background-color: green;
+        color: white; }

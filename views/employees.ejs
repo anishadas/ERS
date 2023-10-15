@@ -12,43 +12,32 @@
                     <th scope="col">Email</th>
                     <th scope="col">Admin</th>
                     <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody class="table-group-divider">
+             <% for(let i=0;i<users.length;i++){ %>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Sriya</td>
-                    <td>sriyaP1002@gmail.com</td>
-                    <td>false</td>
+                    <th scope="row"><%= i+1 %></th>
+                    <td><%= users[i].name %></td>
+                    <td><%= users[i].email  %></td>
+                    <td><%= users[i].isAdmin  %></td>
                     <td>
-                        <a href="/admin/delete/id" class="btn btn-danger">
+                        <% if(users[i]._id!=locals.user.id){ %>
+                        <a href="/admin/delete/<%= users[i]._id  %>" class="btn btn-danger">
                             Delete
+                        </a>
+                        <% } %>
+                    </td>
+                    <td>
+                        <a href="/admin/edit/<%= users[i]._id  %>" class="btn btn-danger">
+                            Edit
                         </a>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Sriya</td>
-                    <td>sriyaP1002@gmail.com</td>
-                    <td>false</td>
-                    <td>
-                        <a href="/admin/delete/id" class="btn btn-danger">
-                            Delete
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Sriya</td>
-                    <td>sriyaP1002@gmail.com</td>
-                    <td>false</td>
-                    <td>
-                        <a href="/admin/delete/id" class="btn btn-danger">
-                            Delete
-                        </a>
-                    </td>
-                </tr>
+                <% } %>
             </tbody>
         </table>
     </div>
 </div>
+

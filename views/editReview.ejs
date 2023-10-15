@@ -1,0 +1,45 @@
+ <% if(review){ %>
+<div class="edit-content">
+    <div class="edit-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Review</h1>
+    </div>
+    <div class="edit-body">
+        <form id="editEmployee" method="post" action="/review/update">
+            <label for="projectName">Review : </label>
+            <textarea
+                class="form-control"
+                name="editReview"
+                rows="5">
+                <%= review.review %>
+            </textarea>
+            <input type="hidden" id="revId" name="revId"
+                value="<%= review._id  %>" />
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary mt-2">Update
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<% }else{ %>
+<div class="edit-content">
+    <div class="edit-header">
+        <h1 class="modal-title fs-5">Add Review</h1>
+    </div>
+    <div class="edit-body">
+        <form id="editEmployee" method="get"
+            action="/review/newReview/<%= reviewTo %>">
+            <label for="projectName">Review : </label>
+            <textarea
+                class="form-control"
+                name="newReview"
+                rows="5">
+            </textarea>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary mt-2">Update
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<% } %>

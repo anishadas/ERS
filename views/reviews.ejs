@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/reviews.css">
+
+<div class="reviewContainer">
+    <h1>Reviews</h1>
+    <div class="list-group">
+        <% for(let r of reviews){ %>
+            <div href="#" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 header"><%= r.review  %></h5>
+                <% if(r.editedBy){  %>
+                <small>Edited By: <%= r.editedBy  %></small>
+                <% } %>
+                <% if(r.to){  %>
+                <small>To: <%= r.to.name  %></small>
+                <% } %>
+                </div>
+                <p class="mb-1 buttns">
+                    <a class="bttn" href="/review/edit/<%= r._id  %>">
+                        Edit Review
+                    </a>
+                    <% if(r.to){ %>
+                    <a  class="bttn" href="/review/edit/<%= r.to._id %>">Add Review</a>
+                    <% } %>
+                </p>
+                <% if(r.from){ %>
+                <small>From: <%= r.from.name  %></small>
+                <% } %>
+
+            </div>
+        <% } %>
+        
+    </div>
+</div>

@@ -11,16 +11,16 @@
 
                 <select name="recpient" class="form-select form-select-lg mb-4">
                     <option selected disabled>Select Recipent</option>
-                    <option value>Payal</option>
-                    <option value>Raghav</option>
-                    <option value>Sriya</option>
+                    <% for(user of users){ %>
+                    <option value="<%= user._id %>"><%= user.name %></option>
+                    <% } %>
                 </select>
 
-                <select name="Reviewer" class="form-select form-select-lg mb-4">
-                    <option selected disabled>Select Recipent</option>
-                    <option value>Payal</option>
-                    <option value>Raghav</option>
-                    <option value>Sriya</option>
+                <select name="reviewer" class="form-select form-select-lg mb-4">
+                    <option selected disabled>Select Reviewer</option>
+                    <% for(user of users){ %>
+                    <option value="<%= user._id %>"><%= user.name %></option>
+                    <% } %>
                 </select>
                 <button class="btn btn-success" type="submit">Assign</button>
             </form>
@@ -35,9 +35,9 @@
                 <select name="recpient" class="form-select form-select-lg mb-4"
                     aria-label="Default select example">
                     <option selected disabled>Select Recipent</option>
-                    <option value>Payal</option>
-                    <option value>Raghav</option>
-                    <option value>Sriya</option>
+                    <% for(user of users){ %>
+                    <option value="<%= user._id %>"><%= user.name %></option>
+                    <% } %>
                 </select>
                 <button class="btn btn-success" type="submit">Set Admin</button>
             </form>

@@ -1,0 +1,20 @@
+<div class="edit-content">
+    <div class="edit-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Details</h1>
+    </div>
+    <div class="edit-body">
+        <form id="editEmployee" method="post" action="/admin/update">
+            <label for="projectName">Name : </label>
+            <input type="text" id="empName" name="empName"
+            placeholder="name" value="<%= employee.name  %>"/>
+
+            <label for="author">Email : </label>
+            <input type="email" id="empMail" name="empMail" value="<%= employee.email  %>" />
+            <input type="hidden" id="empId" name="empId" value="<%= employee._id  %>"/>
+            <div class="btns">
+                <button type="button" class="btn btn1" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn2">Update</button>
+            </div>
+        </form>
+    </div>
+</div>
