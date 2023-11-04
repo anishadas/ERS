@@ -1,6 +1,7 @@
 const User = require('../models/users')
 const Review = require('../models/reviews')
 
+
 module.exports.admin = async (req, res) => {
     if (!req.isAuthenticated()) {
         return res.redirect('/users/sign-in');
